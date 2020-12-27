@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htomohit <htomohit@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: skurosu <skurosu@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 16:55:39 by htomohit          #+#    #+#             */
-/*   Updated: 2020/12/04 19:31:45 by htomohit         ###   ########.fr       */
+/*   Created: 2020/12/04 02:31:50 by skurosu           #+#    #+#             */
+/*   Updated: 2020/12/04 02:31:53 by skurosu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_mini_ls.h"
+#include "ft_mini_ls.h"
 
-int		ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
-	int len;
+	size_t i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

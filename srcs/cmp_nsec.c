@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_dir.c                                        :+:      :+:    :+:   */
+/*   cmp_nsec.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htomohit <htomohit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: skurosu <skurosu@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 08:11:04 by htomohit          #+#    #+#             */
-/*   Updated: 2020/12/07 00:36:51 by htomohit         ###   ########.fr       */
+/*   Created: 2020/12/04 02:32:07 by skurosu           #+#    #+#             */
+/*   Updated: 2020/12/04 02:32:09 by skurosu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_mini_ls.h"
+#include "ft_mini_ls.h"
 
-int			count_dir(char *path)
+int		cmp_nsec(t_info i1, t_info i2)
 {
-	struct dirent	*dirst;
-	int				len;
-	DIR				*dp;
-
-	dp = opendir(path);
-	len = 0;
-	while ((dirst = readdir(dp)) != NULL)
-		len++;
-	closedir(dp);
-	return (len);
+	if (i1.mtime != i2.mtime)
+		return (0);
+	return (i1.mtime_nsec > i2.mtime_nsec);
 }

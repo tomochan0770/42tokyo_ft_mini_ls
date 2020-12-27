@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htomohit <htomohit@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: skurosu <skurosu@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 07:54:19 by htomohit          #+#    #+#             */
-/*   Updated: 2020/12/04 19:28:45 by htomohit         ###   ########.fr       */
+/*   Created: 2020/12/03 01:42:52 by skurosu           #+#    #+#             */
+/*   Updated: 2020/12/03 01:42:56 by skurosu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_mini_ls.h"
+#include "ft_mini_ls.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *str, int fd)
 {
-	int		len;
-
-	if (s)
-	{
-		len = 0;
-		while (s[len])
-			len++;
-		write(fd, s, len);
-	}
+	write(fd, str, ft_strlen(str));
 }

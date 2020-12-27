@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_mtime.c                                       :+:      :+:    :+:   */
+/*   sort_by_mtime.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htomohit <htomohit@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: skurosu <skurosu@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 09:30:23 by htomohit          #+#    #+#             */
-/*   Updated: 2020/12/04 21:27:26 by htomohit         ###   ########.fr       */
+/*   Created: 2020/12/03 01:43:15 by skurosu           #+#    #+#             */
+/*   Updated: 2020/12/04 00:48:07 by skurosu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_mini_ls.h"
+#include "ft_mini_ls.h"
 
-void	sort_mtime(t_info **info, int n)
+void		bubble_sort(t_info **info, int n, int (*cmp_f)(t_info, t_info))
 {
 	int i;
 	int j;
@@ -23,7 +23,7 @@ void	sort_mtime(t_info **info, int n)
 		j = n - 1;
 		while (j > i)
 		{
-			if ((*info)[j - 1].mtime > (*info)[j].mtime)
+			if (cmp_f((*info)[j - 1], (*info)[j]))
 				swap_info(&(*info)[j - 1], &(*info)[j]);
 			j--;
 		}

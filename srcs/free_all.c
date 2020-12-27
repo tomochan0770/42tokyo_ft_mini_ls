@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   all_free.c                                         :+:      :+:    :+:   */
+/*   free_all.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htomohit <htomohit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: skurosu <skurosu@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 18:06:33 by htomohit          #+#    #+#             */
-/*   Updated: 2020/12/07 00:35:25 by htomohit         ###   ########.fr       */
+/*   Created: 2020/12/04 13:29:40 by skurosu           #+#    #+#             */
+/*   Updated: 2020/12/04 13:31:25 by skurosu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_mini_ls.h"
+#include "ft_mini_ls.h"
 
-t_info *all_free(t_info *info, int idx)
+t_info	*free_all(t_info *info, int n)
 {
-	if (idx > 0)
+	int i;
+
+	i = 0;
+	while (i < n)
 	{
-		while (idx)
-		{
-			free(info[idx].name);
-			idx--;
-		}
+		free(info[i].name);
+		i++;
 	}
 	free(info);
 	return (NULL);

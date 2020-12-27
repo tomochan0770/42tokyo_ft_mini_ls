@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_name.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htomohit <htomohit@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: skurosu <skurosu@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 14:02:52 by htomohit          #+#    #+#             */
-/*   Updated: 2020/12/04 19:30:09 by htomohit         ###   ########.fr       */
+/*   Created: 2020/12/03 01:43:03 by skurosu           #+#    #+#             */
+/*   Updated: 2020/12/04 00:46:39 by skurosu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_mini_ls.h"
+#include "ft_mini_ls.h"
 
 void	print_name(t_info *info, int n)
 {

@@ -3,28 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htomohit <htomohit@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: skurosu <skurosu@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/04 18:09:26 by htomohit          #+#    #+#             */
-/*   Updated: 2020/12/04 19:36:11 by htomohit         ###   ########.fr       */
+/*   Created: 2020/12/04 02:32:51 by skurosu           #+#    #+#             */
+/*   Updated: 2020/12/04 03:17:37 by skurosu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_mini_ls.h"
+#include "ft_mini_ls.h"
 
-char		*ft_strdup(char *s1)
+char	*ft_strdup(char *src)
 {
 	char	*dest;
 	int		i;
-	int		len;
 
-	len = ft_strlen(s1);
-	if (!(dest = malloc(sizeof(char) * (len + 1))))
+	if (!(dest = malloc(ft_strlen(src) + 1)))
 		return (NULL);
 	i = 0;
-	while (s1[i])
+	while (src[i])
 	{
-		dest[i] = s1[i];
+		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
